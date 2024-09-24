@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "ES6"],
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.d.ts"],
+  "exclude": ["node_modules"]
+}
