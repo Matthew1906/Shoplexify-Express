@@ -1,6 +1,6 @@
+import express from "express";
 import prisma from "@/utils/prisma";
 import { orders } from "@prisma/client";
-import express from "express";
 
 export const getOrders = async(req:express.Request, res:express.Response)=>{
     try{

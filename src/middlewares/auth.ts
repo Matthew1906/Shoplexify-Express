@@ -1,5 +1,5 @@
-import config from "@/config";
 import express from "express";
+import config from "@/config";
 import { decode } from "next-auth/jwt";
 
 export default async function (req:express.Request, res:express.Response, next:express.NextFunction){

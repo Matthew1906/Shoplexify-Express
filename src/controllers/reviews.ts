@@ -1,5 +1,5 @@
-import prisma from "@/utils/prisma";
 import express from "express";
+import prisma from "@/utils/prisma";
 
 export const getReviews = async(req:express.Request, res:express.Response)=>{
     try {

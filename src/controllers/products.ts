@@ -1,9 +1,9 @@
 import express from "express";
+import slugify from "slugify";
 import config from "@/config";
 import prisma from "@/utils/prisma";
-import { deleteFile, uploadImage } from "@/utils/imagekit";
 import { z } from "zod";
-import slugify from "slugify";
+import { deleteFile, uploadImage } from "@/utils/imagekit";
 
 export const createProduct = async(req:express.Request, res:express.Response)=>{
     try {

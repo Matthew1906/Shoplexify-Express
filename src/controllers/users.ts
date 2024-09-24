@@ -1,5 +1,5 @@
-import prisma from "@/utils/prisma";
 import express from "express";
+import prisma from "@/utils/prisma";
 import { z } from "zod";
 import { comparePassword, generatePassword } from "@/utils/auth";
 
