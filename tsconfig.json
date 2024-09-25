@@ -9,6 +9,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "incremental": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["**/*.ts", "**/*.d.ts"],
   "exclude": ["node_modules"]
