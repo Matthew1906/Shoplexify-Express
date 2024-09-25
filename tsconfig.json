@@ -9,10 +9,6 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "incremental": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"]
-    }
   },
   "include": ["**/*.ts", "**/*.d.ts"],
   "exclude": ["node_modules"]

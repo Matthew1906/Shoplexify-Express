@@ -1,6 +1,6 @@
 import express from "express";
-import { getMetrics, getOrderMetrics, getTopProducts } from "@/controllers/admin";
-import { admin, auth } from "@/middlewares";
+import { getMetrics, getOrderMetrics, getTopProducts } from "../controllers/admin";
+import { admin, auth } from "../middlewares";
 
 const router = express.Router();
 

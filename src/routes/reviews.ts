@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
-import auth from "@/middlewares/auth";
-import { createEditReview, getReviews } from "@/controllers/reviews";
+import { createEditReview, getReviews } from "../controllers/reviews";
+import { auth } from "../middlewares";
 
 const formDataHandler = multer();
 const router = express.Router();

@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
-import auth from "@/middlewares/auth";
-import { addOrder, checkoutOrders, deleteOrder, deleteOrders, editOrder, getOrder, getOrders } from "@/controllers/cart";
+import { addOrder, checkoutOrders, deleteOrder, deleteOrders, editOrder, getOrder, getOrders } from "../controllers/cart";
+import { auth } from "../middlewares";
 
 const formDataHandler = multer();
 const router = express.Router();

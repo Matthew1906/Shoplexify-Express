@@ -1,7 +1,7 @@
 import multer from "multer";
 import express from "express";
-import { admin, auth } from "@/middlewares";
-import { createProduct, getProduct, getProducts, updateProduct, updateProductStock } from "@/controllers/products";
+import { createProduct, getProduct, getProducts, updateProduct, updateProductStock } from "../controllers/products";
+import { admin, auth } from "../middlewares";
 
 const formDataHandler = multer();
 const router = express.Router();

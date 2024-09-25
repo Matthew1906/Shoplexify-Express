@@ -1,7 +1,7 @@
 import express from "express";
-import prisma from "@/utils/prisma";
+import prisma from "../utils/prisma";
 import { z } from "zod";
-import { comparePassword, generatePassword } from "@/utils/auth";
+import { comparePassword, generatePassword } from "../utils/auth";
 
 export const loginUser = async(req:express.Request, res:express.Response)=>{
     try {

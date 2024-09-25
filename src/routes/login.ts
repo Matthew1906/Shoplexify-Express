@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import { loginUser } from "@/controllers/users";
+import { loginUser } from "../controllers/users";
 
 const formDataHandler = multer();
 const router = express.Router();

@@ -1,5 +1,5 @@
 import ImageKit from "imagekit";
-import config from '@/config';
+import config from '../config';
 
 const imagekit = new ImageKit({ 
     publicKey:config.IMAGEKIT_PUBLICKEY, 

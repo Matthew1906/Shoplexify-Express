@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import config from "@/config";
+import config from "../config";
 
 export const comparePassword = async(password: string, encryptedPassword:string): Promise<boolean> => {
     const hashedSplit = encryptedPassword.split("$");
