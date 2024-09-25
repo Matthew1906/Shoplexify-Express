@@ -73,7 +73,7 @@ export const getTransaction = async(req:express.Request, res:express.Response)=>
         if(!user){
             return res.status(404).json({ status:false, message:"User doesn't exist" });
         }
-        const transactionHistory = await prisma.transactions.findFirst({ where:{ id:parseInt(id) }});
+        const transactionHistory = await prisma.transactions.findFirst({ where:{ id:parseInt(id??"0") }});
         if(!transactionHistory){
             return res.status(404).json({ status:false, message:"Transaction doesn't exist" });
         }
@@ -144,7 +144,7 @@ export const updateTransactionStatus = async(req:express.Request, res:express.Re
         if(!user){
             return res.status(404).json({ status:false, message:"User doesn't exist" });
         }
-        const transactionHistory = await prisma.transactions.findFirst({ where:{ id:parseInt(id) }});
+        const transactionHistory = await prisma.transactions.findFirst({ where:{ id:parseInt(id??"0") }});
         if(!transactionHistory){
             return res.status(404).json({ status:false, message:"Transaction doesn't exist" });
         }

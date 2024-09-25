@@ -3,13 +3,19 @@ import config from "../config";
 
 export const comparePassword = async(password: string, encryptedPassword:string): Promise<boolean> => {
     const hashedSplit = encryptedPassword.split("$");
-    const methodSplit = hashedSplit[0].split(":");
+    if(!hashedSplit || (hashedSplit??[]).length < 3){
+        return false;
+    }
+    const methodSplit = hashedSplit[0]?.split(":");
+    if (!methodSplit || (methodSplit??[]).length < 3){
+        return false;
+    }
     const digest = methodSplit[1];
-    const iterations = parseInt(methodSplit[2]); 
+    const iterations = parseInt(methodSplit[2]??"260000"); 
     const salt = hashedSplit[1];
-    const keyLength = hashedSplit[2].length/2;
+    const keyLength = ((hashedSplit[2]??"").length)/2;
     return new Promise((resolve, reject)=>{
-        crypto.pbkdf2(password, salt, iterations, keyLength, digest, (err, derivedKey)=>{
+        crypto.pbkdf2(password, salt??"", iterations, keyLength, digest??"", (err, derivedKey)=>{
             if (err) reject(err);
             const hashedPassword = derivedKey.toString('hex');
             resolve(hashedSplit[2]==hashedPassword);

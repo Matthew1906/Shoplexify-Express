@@ -101,7 +101,7 @@ export const updateUser = async(req:express.Request, res:express.Response)=>{
             if(parsedCredentials.data.dob){
                 const parsedDob = dobSchema.safeParse(dob);
                 if(!parsedDob.success){
-                    return res.status(422).json({ status:false, error:{dob:parsedDob.error.errors[0].message} });
+                    return res.status(422).json({ status:false, error:{dob:parsedDob?.error?.errors[0]?.message} });
                 }
             }
             if (parsedCredentials.data.password && parsedCredentials.data.password != parsedCredentials.data.confirmPassword){

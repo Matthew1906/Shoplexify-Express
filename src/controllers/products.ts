@@ -197,7 +197,7 @@ export const getProduct = async(req:express.Request, res:express.Response)=>{
     try {
         const slug = req.params.slug;
         const data = await prisma.products.findFirst({
-            where:{ slug: slug.toString() },
+            where:{ slug: slug?.toString()??"" },
             select:{ 
                 id: true,
                 slug:true,

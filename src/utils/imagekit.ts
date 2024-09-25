@@ -21,7 +21,7 @@ export const deleteFile = async(filename:string)=>{
         name: filename,
         limit:1,
     })
-    if(files.length==1){
+    if(files.length==1 && files[0]){
         const fileId = files[0].fileId;
         await imagekit.deleteFile(fileId);
         return true;
